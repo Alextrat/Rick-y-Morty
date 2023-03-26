@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+
+import { Route, Routes } from 'react-router-dom';
+import CharactersComponent from './components/CharactersComponent/CharactersComponent';
+import NavComponent from './components/NavComponent/NavComponent';
+import { RMContextProvider } from './context/context';
+import { CharactersPage } from './pages/CharactersPage';
+
+
+import { HomePage } from './pages/HomePage/HomePage';
+import { Locations } from './pages/Locations';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div><NavComponent/></div>
+    <RMContextProvider>
+    {/* <HomePage/> */}   
+      <Routes>
+      <Route exact path="/" element={<HomePage/>}></Route>
+      <Route exact path="/characters" element={<CharactersComponent/>}></Route>
+      <Route exact path='/locations' element={<Locations/>}></Route>
+        <Route exact path='/' element = { HomePage}/>
+      </Routes>
+    </RMContextProvider>
     </div>
   );
 }
