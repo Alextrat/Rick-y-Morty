@@ -1,20 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import styles from './NavComponent.module.css';
 
 
 const NavComponent = () => {
-  return(
-    <Navbar>
-    <Container>
-      <Nav>
-      <Link className="nav-link" to ="/characters">Personajes</Link>
-      <Link className="nav-link" to ="/locations">Localizaciones</Link>
-      <Link className="nav-link" to ="/episondes">Capítulossssssss</Link>
-      </Nav>
-    </Container>
-    </Navbar>
+  return(   
+    <div className={styles.Nav}>
+    <nav>
+     <ul>
+      <li><Link className="nav-link" to ="/">Home</Link></li>
+      <li><Link className="nav-link" to ="/characters">Personajes</Link></li>
+      <li><Link className="nav-link" to ="/locations">Localizaciones</Link></li>
+      <li><Link className="nav-link" to ="/episodes">Capítulos</Link></li>
+      </ul>
+    </nav>
+    </div>
+
         )
 };
 

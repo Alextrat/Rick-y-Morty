@@ -1,3 +1,5 @@
+
+
 .HomePage{
     background-image: url("https://images3.alphacoders.com/812/812062.png");
     background-attachment: fixed;
@@ -8,7 +10,7 @@
     font-family: Impact;
     font-size: 600%; 
     position: absolute; 
-    top: 50%; 
+    top: 70%; 
     left: 50%; 
     margin: -250px 0 0 -450px
 }
